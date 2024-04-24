@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+}
+
+nav{
+    width: 100vw;
+    height: 10vh;
+    background: #073d14;
+}
+
+.logo {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 150px;
+}
+
+.eslogan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    color: #333
+}
+
+.menu{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	transition: all 0.4s ease-in;
+	position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px;
+	width: 40%;
+	font-size: 18px;
+	z-index: 100;
+}
+
+.menu a{
+    margin-left: 40px;
+    color: #fff;
+	text-decoration: none;
+	padding: 10px 20px;
+	border-radius: 20px;
+}
+
+.menu a:hover {
+	background-color: #fff;
+	color: #101420;
+	transition: ease-in .5s;
+}
+
+.image-section {
+    margin-top: 50px; 
+}
+
+.image-section img {
+    width: 200px;
+    height: 200px;
+    margin-top: 200px;
+}
+
+.registration-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.registration-text {
+    font-weight: bold;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+	align-items: center;
+    width: 100%;
+}
+
+.links a{
+    margin-left: 40px;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+}
