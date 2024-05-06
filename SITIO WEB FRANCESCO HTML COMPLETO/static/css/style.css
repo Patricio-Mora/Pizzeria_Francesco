@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+#logo {
+    width: 20%;
+    background-color: rgb(35, 66, 44);
+}
+
+header {
+    background-color: rgb(35, 66, 44);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 5px solid rgba(206, 80, 77, 255);
+}
+
+.Titulo {
+    color: white;
+}
+
+#Textopp {
+    text-align: center;
+    font-family: "Lobster", sans-serif;
+    font-weight: normal;
+}
+
+i {
+    font-family: "Lobster", sans-serif;
+    font-weight: normal;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 1% 0%;
+    align-items: center;
+    border-bottom: 5px solid rgba(206, 80, 77, 255);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: "Lobster", sans-serif;
+}
+
+.carousel {
+    position: relative;
+    max-width: 90%;
+    /* Ajusta el ancho máximo según sea necesario */
+    margin: 0 auto;
+    /* Centra el carrusel en la página */
+    overflow: hidden;
+    /* Oculta las imágenes que están fuera del carrusel */
+    padding: 2%;
+    height: 400px;
+
+}
+
+.carousel-slide {
+    display: none;
+    /* Oculta todas las imágenes por defecto */
+    width: 100%;
+    /* Ajusta el ancho de las imágenes al 100% del carrusel */
+}
+
+.carousel-slide img {
+    width: 100%;
+    /* Ajusta el ancho de las imágenes al 100% del carrusel */
+    height: auto;
+    /* Ajusta la altura automáticamente para mantener la proporción */
+}
+
+.imgcarru {
+    height: 100%;
+}
+.carrusel{
+    padding-bottom: 2%;
+}
+h2,
+p {
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+h2 {
+    font-family: "Lobster", sans-serif;
+    text-align: center;
+}
+p{
+    padding: 0% 6%;
+    text-align: justify;
+    font-family: "Kameron", serif;
+}
+
+.barra{
+    border-top: 5px solid rgba(206, 80, 77, 255);
+}
+
+.links{
+    display: flex;
+    justify-content: space-around;
+    border-top: 5px solid rgba(206, 80, 77, 255);
+    padding: 1% 0%;
+}
+footer{
+    border-top: 5px solid rgba(206, 80, 77, 255);
+    padding: 1% 0%;
+    background-color: rgb(35, 66, 44);
+    color: white;
+}
+
+u{
+    font-family: "Kameron", serif;
+}
+
+.reseña{
+    padding: 10px;
+    display:flex;
+    flex-direction: column;
+}
+
+#reseña{
+    width: 300px;
+    height: 500px;
+}
