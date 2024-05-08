@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzería Francesco</title>
+    <link
+      rel="shortcut icon"
+      href="static/img/LOGO Y FAVICON/FAVICON EDITADO BUENA DEFINICION.ico"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <img src="static/img/LOGO Y FAVICON/logo.png.png" id="logo" />
+
+      <div class="Titulo">
+        <h1 id="Textopp">
+          Francesco, pizza a la piedra. <br />
+          <br />
+          Cocinando las mejores pizzas para vos
+          <i>desde 1985.</i>
+        </h1>
+      </div>
+      <img src="static/img/LOGO Y FAVICON/logo.png.png" id="logo" />
+    </header>
+
+    <nav>
+      <a href="templates/menu_salon.html">Menú Salón</a>
+      <a href="templates/menu_delivery.html">Menú Delivery</a>
+      <a href="templates/contacto.html">Contacto</a>
+    </nav>
+
+    <main>
+      <h2 id="Contac">Contacto</h2>
+      <br />
+
+      <form action="#" method="GET" novalidate>
+        <label id="tform" for="name">Nombre:</label>
+        <input class="botton"
+          type="text"
+          size="30"
+          id="name"
+          name="name"
+          placeholder="Ingrese su Nombre y Apellido..."
+          required
+        /><br /><br />
+
+        <label id="tform" for="email">Correo electrónico:</label>
+        <input class="botton"
+          type="email"
+          size="30"
+          id="email"
+          name="email"
+          placeholder="Ingrese su Dirección de Correo..."
+          required
+        /><br /><br />
+
+        <label id="tform" for="edad">Edad:</label>
+        <input class="botton"
+          type="number"
+          size="30"
+          id="edad"
+          name="edad"
+          placeholder="Ingrese su Edad..."
+          required
+        /><br /><br />
+
+        <label id="tform" for="celular">Teléfono Celular:</label>
+        <input class="botton"
+          type="tel"
+          size="30"
+          id="celular"
+          name="celular"
+          placeholder="Ingrese su Número de Celular..."
+          required
+        /><br /><br />
+
+        <label id="tform" for="motivo">Motivo de la consulta:</label>
+        <select id="motivo" name="motivo" required>
+          <option value="">Seleccione el motivo</option>
+          <option value="recetas">Realizar una reserva</option>
+          <option value="ingredientes">
+            Consultar sobre los días y horarios de apertura
+          </option>
+          <option value="nueva">Realizar una crítica, queja o reclamo</option>
+          <option value="sugerencias">
+            Realizar una sugerencia, propuesta o recomendación
+          </option>
+          <option value="otros">Otros motivos</option></select
+        ><br /><br />
+
+        <label id="tform" for="message">Mensaje:</label>
+        <textarea class="bottonm"
+          id="message"
+          name="message"
+          rows="4"
+          cols="50"
+          placeholder="Escriba aquí su mensaje..."
+          required
+        ></textarea
+        ><br /><br />
+        
+        <p class="check"><input type="checkbox" id="suscribirse" name="suscribirse" />
+        <label id="tform" for="suscribirse"
+          > Deseo recibir información con las últimas promociones y novedades de
+          Francesco en mi correo</label
+        ></p><br /><br />
+
+        <button class="enviar" type="submit">Enviar</button>
+      </form>
+      <br /><br />
+
+    </main>
+
+    <footer>
+      <p><u>Dirección:</u> Bernardo de Irigoyen 3498</p>
+      <p><u>Teléfonos:</u> 451-6194 / 486-3137 Días y</p>
+      <p><u>Horarios de atención:</u>Todos los días de 19 a 23.30 hs</p>
+      <p><u>Consultas:</u> francesco@hotmail.com</p>
+    </footer>
+  </body>
+</html>
