@@ -2,9 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
-}
+    font-family: Arial, Helvetica, sans-serif;
 
+}
 #logo {
     width: 20%;
     background-color: rgb(35, 66, 44);
@@ -29,10 +29,15 @@ header {
     font-weight: normal;
 }
 
-i {
+#encabezado{
     font-family: "Lobster", sans-serif;
     font-weight: normal;
 }
+i {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+}
+
 
 nav {
     display: flex;
@@ -132,6 +137,8 @@ u{
 #Contac{
     font-size: 300%;
     color:  rgba(206, 80, 77, 255);
+    font-family: "Lobster", sans-serif;
+    text-align: center;
 }
 
 form{
@@ -177,3 +184,75 @@ form{
     font-size: 100%;
     cursor: pointer;
 }
+
+.Promo{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Crea dos columnas iguales */
+    gap: 5px; /* Espacio entre las columnas */
+}
+.column {
+    margin: 0px 80px;
+    padding:  30px;
+    border: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Crea dos columnas iguales */   
+    justify-items: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+#promo{
+    width: 200px;
+    height: 200px; 
+}
+
+.añadir{
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+    border-radius: 50px;
+    border: 2px solid rgba(206, 80, 77, 255);
+    background-color: rgba(206, 80, 77, 255);
+    color: white;
+    padding: 2%;
+    width: 150px;
+    font-size: 100%;
+    cursor: pointer;
+}
+
+.columnpizzas {
+    margin: 0px 98px;
+    padding:  30px;
+    border: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea dos columnas iguales */   
+    justify-items: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+#name{
+    font-size: 120%;
+    color: rgba(206, 80, 77, 255);
+    text-align: center;
+}
+
+.tablas{
+    display: flex;
+    justify-content: center;   
+}
+
+#tablaprecios{
+    width: 70%;
+    padding: 2px;
+}
+
+
+.tr,th, td{
+    border: 1px solid black; /* Borde en todas las celdas */
+    padding: 8px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
