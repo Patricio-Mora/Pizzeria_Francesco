@@ -1,7 +1,7 @@
 from app.database import get_db
 
 class Pizza:
-    #movie1=Movie()
+    
     def __init__(self, id_pizza=None, variedad=None, ingredientes=None, tamanio=None, precio_salon=None, precio_delivery=None):
         self.id_pizza = id_pizza
         self.variedad = variedad
