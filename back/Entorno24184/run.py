@@ -11,11 +11,11 @@ CORS(app)
 
 # Rutas de la API-REST
 app.route('/', methods=['GET'])(index)
-app.route('/api/movies/', methods=['POST'])(create_movie)
-app.route('/api/movies/', methods=['GET'])(get_all_movies)
-app.route('/api/movies/<int:movie_id>', methods=['GET'])(get_movie)
-app.route('/api/movies/<int:movie_id>', methods=['PUT'])(update_movie)
-app.route('/api/movies/<int:movie_id>', methods=['DELETE'])(delete_movie)
+app.route('/api/pizzas/', methods=['POST'])(create_pizza)
+app.route('/api/pizzas/', methods=['GET'])(get_all_pizzas)
+app.route('/api/pizzas/<int:pizza_id>', methods=['GET'])(get_pizza)
+app.route('/api/pizzas/<int:pizza_id>', methods=['PUT'])(update_pizza)
+app.route('/api/pizzas/<int:pizza_id>', methods=['DELETE'])(delete_pizza)
 
 if __name__ == '__main__' :
     app.run(debug=True)
