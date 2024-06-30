@@ -20,7 +20,7 @@ class Pizza:
             """, (self.variedad, self.ingredientes, self.tamanio, self.precio_salon, self.precio_delivery, self.id_pizza))
         else:
             cursor.execute("""
-                INSERT INTO movies (variedad, ingredientes, tamanio, precio_salon, precio_delivery) VALUES (%s, %s, %s, %s, %s)
+                INSERT INTO pizzas (variedad, ingredientes, tamanio, precio_salon, precio_delivery) VALUES (%s, %s, %s, %s, %s)
             """, (self.variedad, self.ingredientes, self.tamanio, self.precio_salon, self.precio_delivery))
             self.id_pizza = cursor.lastrowid
         db.commit()
@@ -32,7 +32,7 @@ class Pizza:
         cursor = db.cursor()
         cursor.execute("SELECT * FROM pizzas")
         rows = cursor.fetchall()
-        pizzas = [Pizza(id_pizza=row[0], variedad=row[1], ingredientes=row[2], tamanio=row[3], precio_salon=row[4], precio_delivery=[5]) for row in rows]
+        pizzas = [Pizza(id_pizza=row[0], variedad=row[1], ingredientes=row[2], tamanio=row[3], precio_salon=row[4], precio_delivery=row[5]) for row in rows]
         cursor.close()
         return pizzas
 
@@ -44,13 +44,13 @@ class Pizza:
         row = cursor.fetchone()
         cursor.close()
         if row:
-            return Pizza(id_pizza=row[0], variedad=row[1], ingredientes=row[2], tamanio=row[3], precio_salon=row[4], precio_delivery=[5])
+            return Pizza(id_pizza=row[0], variedad=row[1], ingredientes=row[2], tamanio=row[3], precio_salon=row[4], precio_delivery=row[5])
         return None
 
     def delete(self):
         db = get_db()
         cursor = db.cursor()
-        cursor.execute("DELETE FROM movies WHERE id_pizza = %s", (self.id_pizza,))
+        cursor.execute("DELETE FROM pizzas WHERE id_pizza = %s", (self.id_pizza,))
         db.commit()
         cursor.close()
 
