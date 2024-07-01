@@ -22,9 +22,13 @@
       rel="stylesheet"
     />
 
+      <!-- Agregar fontawesome -->
+      <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+
+
     <!-- HACEMOS REFERENCIA A UN DOCUMENTO CSS EXTERNO -->
     <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="../static/css/crud_pizzas.css">
+    
     
 
     <!-- INTERNO AL DOCUMENTO -->
@@ -54,7 +58,7 @@
     
    <nav>
     <a href="../index.html">Inicio</a>
-    <a href="menu_salon.html">Menú Salón</a>
+    <a href="menu_salon.html">Menú Salon</a>
     <a href="menu_delivery.html">Menú Delivery</a>
     <a href="contacto.html">Contacto</a>
     <a href="crud_pizzas.html">CRUD Pizzas</a>
@@ -71,27 +75,27 @@
                 <div class="d-flex">
 
                     <div class="form-control d-flex-column">
-                        <label class="tform" for="variedad">Variedad:</label>
+                        <label class="tform" for="title">Variedad:</label>
                         <input type="text" class="input-search" name="variedad" id="variedad">
                     </div>
 
                     <div class="form-control d-flex-column">
-                        <label  class="tform" for="ingredientes">Ingredientes:</label>
+                        <label  class="tform" for="director">Ingredientes:</label>
                         <input type="text" class="input-search" name="ingredientes" id="ingredientes">
                     </div>
 
                     <div class="form-control d-flex-column">
-                        <label class="tform" for="tamanio">Tamaño:</label>
-                        <input type="text" class="input-search" name="tamaño" id="tamanio">
+                        <label class="tform" for="director">Tamanio:</label>
+                        <input type="text" class="input-search" name="tamanio" id="tamanio">
                     </div>
 
                     <div class="form-control d-flex-column">
-                        <label class="tform"  for="precio_salon">Precio Salón:</label>
+                        <label class="tform"  for="rating">Precio Salon:</label>
                         <input type="number" class="input-search" name="precio_salon" id="precio_salon">
                     </div>
 
                   <div class="form-control d-flex-column">
-                        <label class="tform"  for="precio_delivery">Precio Delivery:</label>
+                        <label class="tform"  for="rating">Precio Delivery:</label>
                         <input type="number" class="input-search" name="precio_delivery" id="precio_delivery">
                     </div>
 
@@ -115,8 +119,8 @@
                     <tr>
                         <th>Variedad</th>
                         <th>Ingredientes</th>
-                        <th>Tamaño</th>
-                        <th>Precio Salón</th>
+                        <th>Tamanio</th>
+                        <th>Precio Salon</th>
                         <th>Precio Delivery</th>
                     </tr>
                 </thead>
@@ -137,8 +141,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../static/js/index.js"></script>
-    <script src="../static/js/crud-pizzas-fetch.js"></script>
+    <script src="../static/js/crud_pizzas_fetch.js"></script>
 </body>
 
 </html>

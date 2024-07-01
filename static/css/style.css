@@ -287,6 +287,16 @@ form{
     cursor: pointer;
 }
 
+#actualizar {
+    margin: 5px;
+    background-color:  rgb(33, 82, 47);
+   
+}
+
+#borrar{
+    margin: 5px;
+}
+
 .tablas{
     display: flex;
     justify-content: center;   
