@@ -98,8 +98,8 @@ async function showPizzas(){
                   <td>${pizza.precio_salon}</td>
                   <td>${pizza.precio_delivery}</td>
                   <td>
-                      <button class="enviar" onclick='updatePizza(${pizza.id_pizza})'><i class="fa fa-pencil" ></button></i>
-                      <button class="enviar" onclick='deletePizza(${pizza.id_pizza})'><i class="fa fa-trash" ></button></i>
+                      <button class="enviar" id="editar" onclick='updatePizza(${pizza.id_pizza})'><i class="fa fa-pencil" > Actualizar</button></i>
+                      <button class="enviar" id="borrar" onclick='deletePizza(${pizza.id_pizza})'><i class="fa fa-trash" > Eliminar</button></i>
                   </td>
                 </tr>`;
     tablePizzas.insertAdjacentHTML("beforeend",tr);
