@@ -287,6 +287,16 @@ form{
     cursor: pointer;
 }
 
+#editar {
+    margin: 5px;
+    background-color:  rgb(33, 82, 47);
+   
+}
+
+#borrar{
+    margin: 5px;
+}
+
 .tablas{
     display: flex;
     justify-content: center;   
@@ -425,7 +435,7 @@ th {
     margin-bottom: 30px;
 }
 
-.form-control input {
+.form-control input, select {
     height: 50px;
     width: 100%;
     background: rgba(255,255,255,0.1);
@@ -435,6 +445,32 @@ th {
     color: black;
     font-size: 1rem;
     padding: 0.5%;
+}
+
+.form-control select {
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    appearance: none; 
+    background: rgba(255, 255, 255, 0.1) url('data:image/svg+xml;utf8,<svg fill="rgba(206, 80, 77, 255)" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center; 
+    padding-right: 40px; 
+}
+
+select option:first-child[disabled] {
+    display: none;
+}
+
+.input-search option[disabled]:first-child {
+    color: rgba(206, 80, 77, 255);
+}
+
+.tform {
+    font-size: 130%;
+    font-family: "Lobster", sans-serif;
+    margin-bottom: 10px;
+}
+
+.input-search::placeholder {
+    text-align: center;
 }
 
 #list{
