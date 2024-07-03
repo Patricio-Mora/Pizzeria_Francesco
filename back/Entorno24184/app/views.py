@@ -1,5 +1,5 @@
 from flask import jsonify, request
-from app.models import Pizza, Usuario
+from app.models import Pizza
 
 def index() :
     return jsonify({'message': 'Hello World API Pizza_Francesco'})
@@ -40,39 +40,3 @@ def delete_pizza(pizza_id):
     pizza.delete()
     return jsonify({'message': 'Pizza deleted successfully'})
 
-# Usuarios
-
-def create_usuario():
-    data = request.json
-    new_usuario = Usuario(nombre=data['nombre'], apellido=data['apellido'], correo=data['correo'], telefono=data['telefono'])
-    new_usuario.save()
-    return jsonify({'message': 'Usuario creado exitosamente'}), 201
-
-def get_all_usuarios():
-    usuarios = Usuario.get_all()
-    return jsonify([Usuario.serialize() for Usuario in usuarios])
-
-def get_usuario(usuario_id_id):
-    Usuario = Usuario.get_by_id(Usuario_id)
-    if not usuario:
-        return jsonify({'message': 'Usuario no encontrado'}), 404
-    return jsonify(usuario.serialize())
-
-def update_usuario(usuario_id):
-    usuario = Usuario.get_by_id(usuario_id)
-    if not usuario:
-        return jsonify({'message': 'Usuario no encontrado'}), 404
-    data = request.json
-    usuario.no = data['apellido']
-    usuario.apellido = data['apellido']
-    usuario.correo = data['correo']
-    usuario.telefono = data['telefono']
-    usuario.save()
-    return jsonify({'message': 'Usuario actualizado exitosamente'})
-
-def delete_usuario(usuario_id):
-    usuario = Usuario.get_by_id(usuario_id)
-    if not usuario:
-        return jsonify({'message': 'Usuario no encontrado'}), 404
-    usuario.delete()
-    return jsonify({'message': 'Usuario borrado exitosamente'})

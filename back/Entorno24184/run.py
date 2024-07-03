@@ -19,7 +19,7 @@ app.route('/api/pizzas/<int:pizza_id>', methods=['DELETE'])(delete_pizza)
 
 # Usuarios
 app.route('/api/usuarios/', methods=['POST'])(create_usuario)
-app.route('/api/usuarios/', methods=['GET'])(get_all_usuario)
+app.route('/api/usuarios/', methods=['GET'])(get_all_usuarios)
 app.route('/api/usuarios/<int:usuario_id>', methods=['GET'])(get_usuario)
 app.route('/api/usuarios/<int:usuario_id>', methods=['PUT'])(update_usuario)
 app.route('/api/usuarios/<int:usuario_id>', methods=['DELETE'])(delete_usuario)
