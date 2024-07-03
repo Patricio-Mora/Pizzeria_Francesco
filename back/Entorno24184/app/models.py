@@ -63,3 +63,67 @@ class Pizza:
             'precio_salon': self.precio_salon,
             'precio_delivery': self.precio_delivery
         }
+
+# Usuarios
+
+class Usuario:
+    
+    def __init__(self, id_usuario=None, nombre=None, apellido=None, correo=None, telefono=None):
+        self.id_usuario = id_usuario
+        self.nombre = nombre
+        self.apellido = apellido
+        self.correo = correo
+        self.telefono = telefono
+    
+    def save(self):
+        db = get_db()
+        cursor = db.cursor() # cursor me permite entrar a diferentes variables
+        if self.id_usuario:
+            cursor.execute("""
+                UPDATE usuarios SET nombre = %s, apellido = %s, correo = %s, telefono = %s
+                WHERE id_usuario = %s
+            """, (self.nombre, self.apellido, self.correoo, self.telefono, self.id_usuario))
+        else:
+            cursor.execute("""
+                INSERT INTO usuarios (nombre, apellido, correo, telefono) VALUES (%s, %s, %s, %s)
+            """, (self.nombre, self.apellido, self.correo, self.telefono))
+            self.id_pizza = cursor.lastrowid
+        db.commit()
+        cursor.close()
+    
+    @staticmethod
+    def get_all():
+        db = get_db()
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM usuarios")
+        rows = cursor.fetchall()
+        pizzas = [Usuario(id_usuario=row[0], nombre=row[1], apellido=row[2], correo=row[3], telefono=row[4]) for row in rows]
+        cursor.close()
+        return usuarios
+
+    @staticmethod
+    def get_by_id(usuario_id):
+        db = get_db()
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM usuarios WHERE id_usuario = %s", (usuario_id,))
+        row = cursor.fetchone()
+        cursor.close()
+        if row:
+            return Pizza(id_usuario=row[0], nombre=row[1], apellido=row[2], correo=row[3], telefono=row[4])
+        return None
+
+    def delete(self):
+        db = get_db()
+        cursor = db.cursor()
+        cursor.execute("DELETE FROM pizzas WHERE id_usuario = %s", (self.id_usuario,))
+        db.commit()
+        cursor.close()
+
+    def serialize(self):
+        return {
+            'id_usuario': self.id_usuario,
+            'nombre': self.nombre,
+            'apellido': self.apellido,
+            'correo': self.telefono,
+            'telefono': self.telefono
+        }

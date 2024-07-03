@@ -17,6 +17,13 @@ app.route('/api/pizzas/<int:pizza_id>', methods=['GET'])(get_pizza)
 app.route('/api/pizzas/<int:pizza_id>', methods=['PUT'])(update_pizza)
 app.route('/api/pizzas/<int:pizza_id>', methods=['DELETE'])(delete_pizza)
 
+# Usuarios
+app.route('/api/usuarios/', methods=['POST'])(create_usuario)
+app.route('/api/usuarios/', methods=['GET'])(get_all_usuario)
+app.route('/api/usuarios/<int:usuario_id>', methods=['GET'])(get_usuario)
+app.route('/api/usuarios/<int:usuario_id>', methods=['PUT'])(update_usuario)
+app.route('/api/usuarios/<int:usuario_id>', methods=['DELETE'])(delete_usuario)
+
 if __name__ == '__main__' :
     app.run(debug=True)
 
