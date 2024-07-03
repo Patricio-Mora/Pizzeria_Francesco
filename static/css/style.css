@@ -54,26 +54,6 @@ nav a:hover{
     border-radius: 8px;
 }
 
-ul, li {
-    background: rgb(33, 82, 47);
-    display: flex;
-    justify-content: space-around;
-    padding: 1% 0%;
-    align-items: center;
-    border-bottom: 8px solid rgba(206, 80, 77, 255);   
-}
-li {
-    font-size: 30px; /* Tamaño de fuente deseado */
-}
-
-li:hover{
-	background: #fff; 
-    color: rgb(33, 82, 47); 
-    transition: ease-in .3s;
-    border-radius: 8px;
-    color: #fff
-}
-
 .reseña a:hover{
     background: rgba(186, 60, 57, 235);
 	color: #fff;
